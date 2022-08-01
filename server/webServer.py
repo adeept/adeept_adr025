@@ -10,7 +10,7 @@ import socket
 import info
 
 import RPi.GPIO as GPIO
-import PCF8591 as ADC
+# import PCF8591 as ADC
 
 # websocket
 import asyncio
