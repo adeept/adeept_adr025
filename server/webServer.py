@@ -124,7 +124,7 @@ def robotCtrl(command_input, response):
     elif command_input == 'save_pos':
         Pos = scGear.servoAngle()
         newPos = []
-        for i in range(0, 5):
+        for i in range(0, 16):
             newPos.append(Pos[i])
         print("save_pos:",newPos)
         scGear.newPlanAppend(newPos)

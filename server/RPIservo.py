@@ -57,8 +57,8 @@ class ServoCtrl(threading.Thread):
         '''
         5-DOF 机械臂 / 5-DOF Robotic Arm
         '''
-        self.nowPos = [90, 90, 90, 90, 90]
-
+        # self.nowPos = [90, 90, 90, 90, 90]
+        self.nowPos = [90,90,90,90, 90,90,90,90, 90,90,90,90, 90,90,90,90] # ADR025
         '''
         planDataSaved
         '''
@@ -216,7 +216,7 @@ class ServoCtrl(threading.Thread):
                     self.pause()
                     break
                 print(goalPos)
-                self.moveToPos(5, goalPos) # (number, goalPos)--(5 servos, an array of angle values)
+                self.moveToPos(16, goalPos) # (number, goalPos)--(5 servos, an array of angle values)
                 time.sleep(1) # 
         else:
             print("planGoseList is not an array, and the content saved in the plan.json file is incorrect.")
